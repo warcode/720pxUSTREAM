@@ -1,0 +1,63 @@
+body {
+	background-color: #272822;
+}
+
+body, td {
+	font:normal normal 100%/1.0 'Arbutus Slab';
+}
+
+.player-container {
+}
+
+.hidden {
+	display: none;
+}
+
+.help-text {
+	position: relative;
+	top: 10%;
+	left: 10%;
+	color: gray;
+}
+
+.size-control-container {
+	width: 800px;
+	height: 300px;
+	position: relative;
+	top: 10px;
+	left: 30%;
+}
+
+.size-control-dropdown {
+	width: 800px;
+	color: gray;
+	text-align:center;
+}
+
+.size-control-buttons {
+	width: 800px;
+	word-spacing:1em;
+	width: 100%;
+	margin:0 auto;
+}
+
+.size-control-link {
+	text-align:center !important;
+	display: block !important;
+}
+
+
+a:link {
+	color: #ae81ff !important;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #ae81ff !important;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #66d9ef !important;
+	text-decoration: none;
+}
