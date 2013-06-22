@@ -3,18 +3,18 @@
   <head>
     <meta charset="utf-8">
       
-    <link href='http://fonts.googleapis.com/css?family=Arbutus+Slab' rel='stylesheet' type='text/css'>  
+    <link href='https://fonts.googleapis.com/css?family=Arbutus+Slab' rel='stylesheet' type='text/css'>  
     <link rel="stylesheet" type="text/css" href="720pxUSTREAM.css">
       
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script type="text/javascript" src="underscore-min.js"></script>
     <script type="text/javascript" src="json2.js"></script>
     <script type="text/javascript" src="backbone-min.js"></script>
-    <script type="text/javascript" src="http://static.ustream.tv/js/libs/ustream-embedapi.min.js"></script>
+    <script type="text/javascript" src="https://static.ustream.tv/js/libs/ustream-embedapi.min.js"></script>
 
     <script>
     function playChannel(stream, viewer) {
-      var id = $.getJSON("http://api.ustream.tv/json/channel/"+stream+"/getValueOf/id/?key=06F3916E1DCEDD4519DAB386D9362D4B&callback=?",
+      var id = $.getJSON("https://api.ustream.tv/json/channel/"+stream+"/getValueOf/id/?key=06F3916E1DCEDD4519DAB386D9362D4B&callback=?",
       [],
       function(data) {
         viewer.callMethod('load', 'channel', data);
@@ -108,11 +108,11 @@
 
   <body>
     <div class="help-text">
-      Use http://url/#/channel/channelname to view a stream.
+      Use https://deny.io/720px-u/#/channel/channelname to view a stream.
     </div>
     
     <div class="player-container hidden">
-      <iframe id="streamiframe" width="1280" height="750" src="http://www.ustream.tv/embed/0?v=3&amp;wmode=direct" scrolling="no" frameborder="0" style="border: 0px none transparent;"></iframe>
+      <iframe id="streamiframe" width="1280" height="750" src="https://www.ustream.tv/embed/0?v=3&amp;wmode=direct" scrolling="no" frameborder="0" style="border: 0px none transparent;"></iframe>
     </div>
     
     <div class="size-control-container hidden">
