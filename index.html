@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
       
@@ -78,15 +79,28 @@
       
     });
     
+    
     function resizePlayer(width, height) {
-      //document.getElementById("live_embed_player_flash").style.height = height;
-      //document.getElementById("live_embed_player_flash").style.width = width;
-      //localStorage.setItem('warcode.720px.player.height', height);
-      //localStorage.setItem('warcode.720px.player.width', width);
+      resizePlayer(width, height, 150);
+    }
+    function resizePlayer(width, height, ms) {
+      if(width === 0 && height === 0) {
+        height = $(window).height() - 10;
+        width = (($(window).height()- 40) / 9) * 16;
+        
+      }
+      else {
+        if (width > window.innerWidth) width = window.innerWidth;
+        if (height > window.innerHeight) height = window.innerHeight;
+      }
       $('#streamiframe').animate({
         height: height,
         width: width
-      }, 250);
+      }, ms);
+    }
+    
+    function currentURL() {
+      return Backbone.history.location.origin + "/#/" + Backbone.history.fragment;    
     }
 
     </script>
@@ -107,18 +121,19 @@
       </div>
       <br/>
       <div class="size-control-buttons hidden">
-        <a href='#' onClick='resizePlayer(640, 390)' class="size-control-link">[360p]</a> 
-        <a href='#' onClick='resizePlayer(854, 510)' class="size-control-link">[480p]</a> 
-        <a href='#' onClick='resizePlayer(960, 570)' class="size-control-link">[540p]</a>
-        <a href='#' onClick='resizePlayer(1024, 606)' class="size-control-link">[576p]</a><br>
-        <a href='#' onClick='resizePlayer(1280, 750)' class="size-control-link">[720p]</a>
-        <a href='#' onClick='resizePlayer(1366, 798)' class="size-control-link">[768p]</a>
-        <a href='#' onClick='resizePlayer(1600, 930)' class="size-control-link">[900p]</a>
-        <a href='#' onClick='resizePlayer(1920, 1110)' class="size-control-link">[1080p]</a><br>
-        <a href='#' onClick='resizePlayer(2048, 1182)' class="size-control-link">[1152p]</a>
-        <a href='#' onClick='resizePlayer(2560, 1470)' class="size-control-link">[1440p]</a>
-        <a href='#' onClick='resizePlayer(3840, 2190)' class="size-control-link">[2160p]</a>
-        <a href='#' onClick='resizePlayer(4096, 2334)' class="size-control-link">[2304p]</a>
+        <a href='javascript:void(0)' onClick='resizePlayer(0, 0)' class="size-control-link">[MAXp]</a>
+        <a href='javascript:void(0)' onClick='resizePlayer(640, 390)' class="size-control-link">[360p]</a> 
+        <a href='javascript:void(0)' onClick='resizePlayer(854, 510)' class="size-control-link">[480p]</a> 
+        <a href='javascript:void(0)' onClick='resizePlayer(960, 570)' class="size-control-link">[540p]</a>
+        <a href='javascript:void(0)' onClick='resizePlayer(1024, 606)' class="size-control-link">[576p]</a><br>
+        <a href='javascript:void(0)' onClick='resizePlayer(1280, 750)' class="size-control-link">[720p]</a>
+        <a href='javascript:void(0)' onClick='resizePlayer(1366, 798)' class="size-control-link">[768p]</a>
+        <a href='javascript:void(0)' onClick='resizePlayer(1600, 930)' class="size-control-link">[900p]</a>
+        <a href='javascript:void(0)' onClick='resizePlayer(1920, 1110)' class="size-control-link">[1080p]</a><br>
+        <a href='javascript:void(0)' onClick='resizePlayer(2048, 1182)' class="size-control-link">[1152p]</a>
+        <a href='javascript:void(0)' onClick='resizePlayer(2560, 1470)' class="size-control-link">[1440p]</a>
+        <a href='javascript:void(0)' onClick='resizePlayer(3840, 2190)' class="size-control-link">[2160p]</a>
+        <a href='javascript:void(0)' onClick='resizePlayer(4096, 2334)' class="size-control-link">[2304p]</a>
       </div>
     </div>
   </body>

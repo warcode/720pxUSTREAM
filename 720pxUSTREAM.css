@@ -7,6 +7,7 @@ body, td {
 }
 
 .player-container {
+	background-color: #272822;
 }
 
 .hidden {
@@ -32,6 +33,12 @@ body, td {
 	width: 800px;
 	color: gray;
 	text-align:center;
+}
+
+.size-control-dropdown:hover {
+	color: #66d9ef !important;
+	text-decoration: none;
+	cursor: pointer;
 }
 
 .size-control-buttons {
