@@ -11,6 +11,7 @@
     <script type="text/javascript" src="json2.js"></script>
     <script type="text/javascript" src="backbone-min.js"></script>
     <script type="text/javascript" src="https://static.ustream.tv/js/libs/ustream-embedapi.min.js"></script>
+    <script type="text/javascript" src="denyAnalytics.js"></script>
 
     <script>
     function playChannel(stream, viewer) {
@@ -41,6 +42,8 @@
     var viewer;
     $(function() {
       viewer = UstreamEmbed('streamiframe');
+
+      denyAnalytics.Visit("warcode.net", "720px-u");
       
       var AppRouter = Backbone.Router.extend({
         routes: {
